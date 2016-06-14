@@ -36,9 +36,9 @@ RUN     apt-get update && apt-get install -y \
 # repeatable builds use the latest SHA
 ADD     download.sh /opt/download.sh
 WORKDIR /opt
-RUN     bash download.sh phabricator 79f2e81f38
-RUN     bash download.sh arcanist    c304c4e045
-RUN     bash download.sh libphutil   55f554b618
+RUN     bash download.sh phabricator stable
+RUN     bash download.sh arcanist    stable
+RUN     bash download.sh libphutil   stable
 
 # Setup apache
 RUN     a2enmod rewrite
